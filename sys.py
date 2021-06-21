@@ -14,7 +14,7 @@ def keyboardInterruptHandler(signal, frame):
     os._exit(1)
 signal.signal(signal.SIGINT, keyboardInterruptHandler)
 client = mqtt.Client()
-client.connect("192.168.0.109",1883,60)
+client.connect(" ",1883,60) #add IP address of the MQTT server 
 uname = platform.uname()
 boot_time_timestamp = psutil.boot_time()
 bt = datetime.fromtimestamp(boot_time_timestamp)
