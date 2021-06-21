@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style >
+      table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+
+
+}
+table {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+}
+td,tr,th {
+  text-align: center;
+}
+th {
+  background-color: #345beb;
+  color: white;
+}
+    </style>
+    <title></title>
+        <meta http-equiv = "refresh" content = "3; url = http://0.0.0.0/" />
+  </head>
+  <body>
+    <div class="container">
+    <div style="background:transparent !important" class="jumbotron">
+      <h1>Welcome to Pi-Resource Monitor</h1>
+
+
+
+      <div class="jumbotron">
+    <h1>System</h1>
+    {% if system==0 %}
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    {%else%}
+    {{system}}
+    {% endif %}  </div>
+  <div class="jumbotron">
+<h1>CPU</h1>
+{% if cpu==0 %}
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+{%else%}
+{{cpu}}
+{% endif %}</div>
+<div class="jumbotron">
+<h1>Memory</h1>
+{% if memory==0 %}
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+{%else%}
+{{memory}}
+{% endif %}</div>
+<div class="jumbotron">
+<h1>Swap</h1>
+{% if swap==0 %}
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+{%else%}
+{{swap}}
+{% endif %}
+</div>
+<div class="jumbotron">
+<h1>Disk</h1>
+{% if disk==0 %}
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+{%else%}
+{{disk}}
+{% endif %}</div>
+<div class="jumbotron">
+<h1>Network</h1>
+{% if network==0 %}
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+{%else%}
+{{network}}
+{% endif %}</div>
+<div class="jumbotron">
+<h1>Speed</h1>
+{% if speed==0 %}
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+{%else%}
+{{speed}}
+{% endif %}</div>
+
+    </div>
+    </div>
+  </body>
+</html>
